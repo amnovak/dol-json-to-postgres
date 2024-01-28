@@ -104,7 +104,6 @@ pycparser==2.21
 Pygments==2.16.1
 PyGObject==3.42.1
 PyJWT==2.3.0
-pyogrio==0.6.0
 pyparsing==2.4.7
 pyproj==3.5.0
 python-apt==2.4.0+ubuntu1
