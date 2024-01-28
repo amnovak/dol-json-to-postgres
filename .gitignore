@@ -1,0 +1,6 @@
+__pycache__/
+sandbox/
+.env
+
+~$json_postgres_crosswalk.xlsx
+*.csv
