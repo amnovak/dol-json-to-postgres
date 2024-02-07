@@ -4,7 +4,7 @@ Module to upsert JSON files downloaded from DOL data feeds to PostgreSQL databas
 """
 
 # from imghdr import tests
-from msilib.schema import File, tables
+# from msilib.schema import File, tables
 import os
 import logging
 import traceback
