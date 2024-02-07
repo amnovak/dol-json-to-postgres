@@ -38,6 +38,7 @@ GitPython==3.1.40
 httplib2==0.20.2
 idna==3.4
 importlib-metadata==4.6.4
+inflection==0.5.1
 ipykernel==6.25.2
 ipython==8.16.1
 ipython-genutils==0.2.0
