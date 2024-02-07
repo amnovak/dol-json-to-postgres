@@ -14,7 +14,7 @@ if __name__ == '__main__':
     
     # Testing scheduler and clock process 
     sched = BlockingScheduler()
-    sched.add_job(weekly_update, 'interval', minutes=10, start_date='2024-02-07 10:20:00', timezone='US/Central')
+    sched.add_job(weekly_update, 'interval', minutes=10, start_date='2024-02-07 16:00:00', timezone='US/Central')
     sched.start()
 
 
