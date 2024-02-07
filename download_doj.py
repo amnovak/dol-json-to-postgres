@@ -54,6 +54,10 @@ def download_all():
 
 
 def download_latest():
+
+    if not os.path.exists("zipcache"):
+        os.mkdir("zipcache")
+
     print("Downloading just the latest JSON files.")
 
     date = datetime.date.today()
@@ -68,11 +72,8 @@ def download_latest():
 
         print(url)
         if not download(url, dest):
-            print("download failed")
+            print(f"{item} download failed")
 
 
-
-if not os.path.exists("zipcache"):
-    os.mkdir("zipcache")
 
 download_latest()

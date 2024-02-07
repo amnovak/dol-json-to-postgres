@@ -1,6 +1,11 @@
 __pycache__/
-sandbox/
 .env
 
+json_postgres_crosswalk.xlsx
 ~$json_postgres_crosswalk.xlsx
 *.csv
+sandbox/
+zipcache/
+h2a/
+h2b/
+jo/
