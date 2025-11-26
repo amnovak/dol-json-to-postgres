@@ -18,18 +18,20 @@ def extract(filename):
                 save_json(dest, case)
 
 def save_json(dest, data):
-    if not os.path.exists(dest):
         # In Windows 10, python3 you need to specify encoding
         with open(dest, "w", encoding="utf-8") as outfile:
             json.dump(data, outfile, indent=4, sort_keys=True, ensure_ascii=False)
 
 def extract_all():
+
+    for d in ["jo", "h2a", "h2b"]:
+        if not os.path.exists(d):
+            os.mkdir(d)
+
     for filename in sorted(os.listdir("zipcache")):
         extract("zipcache/" + filename)
 
-for d in ["jo", "h2a", "h2b"]:
-# for d in ["jo"]:
-    if not os.path.exists(d):
-        os.mkdir(d)
 
-extract_all()
+
+if __name__ == "__main__":
+    extract_all()

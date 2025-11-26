@@ -9,3 +9,6 @@ zipcache/
 h2a/
 h2b/
 jo/
+
+h2a_json_to_apify_mapping.py
+h2b_json_to_apify_mapping.py

@@ -30,8 +30,16 @@ def download(url, dest, retries=25):
 
 
 def download_all():
-    # To download all available data set to .date(2019,10,9)
-    date = datetime.date(2023, 3, 2)
+
+    if not os.path.exists("zipcache"):
+        os.mkdir("zipcache")
+
+
+    # To download all available data set to October 9, 2023:  .date(2019,10,9) 
+    date = datetime.date(2025, 1, 31)
+
+    print(f"Downloading all data since {date}")
+
     while True:
         for item in ["jo", "h2a", "h2b"]:
             d = date.isoformat()
@@ -75,5 +83,5 @@ def download_latest():
             print(f"{item} download failed")
 
 
-
-download_latest()
+if __name__ == '__main__':
+    download_latest()
