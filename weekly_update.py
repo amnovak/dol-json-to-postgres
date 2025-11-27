@@ -1,3 +1,20 @@
+from datetime import datetime, timezone
+import sys
+
+
+# Get current weekday (UTC)
+now_utc = datetime.now(timezone.utc)
+
+today = now_utc.weekday()
+
+if today != 0:
+    print(f"Today is {now_utc.strftime('%A')} (UTC). This update runs on Monday.")
+    sys.exit()
+
+else: 
+    print(f"Today is {now_utc.strftime('%A')} (UTC). Starting weekly update...")
+
+
 from download_doj import download_latest
 from extract_doj import extract_all
 from update_postgres import upsert_json
