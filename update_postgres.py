@@ -126,9 +126,15 @@ def load_and_clean_data(directory, cols_to_drop, date_cols, additional_transform
 
 
 def additional_numeric_transform(df): 
-    """ Convert 'app_is_cap_exempt' column to numeric if present"""
+    """ Convert 'app_is_cap_exempt' column to numeric if present. """
     df['appIsCapExempt'] = pd.to_numeric(df['appIsCapExempt'])
-    return df
+    return 
+
+
+def additional_h2a_transforms(df):
+    """Convert clearance_order_job_piece_rate column to double precision (float64) if present. """
+    df['clearance_order_job_piece_rate'] = df['clearance_order_job_piece_rate'].astype('float64')
+    return 
 
 
 def h2b_to_postgres():
@@ -160,7 +166,9 @@ def h2a_to_postgres():
         'clearanceOrder.jobBeginDate': 'clearance_order_job_begin_date_ymd'
     }
 
-    load_and_clean_data("h2a", cols_to_drop, date_cols)
+    additional_transforms = additional_h2a_transforms
+
+    load_and_clean_data("h2a", cols_to_drop, date_cols, additional_transforms)
 
 
 
